@@ -1,0 +1,18 @@
+--12c에서 PK sequence
+-- : DEFAULT VALUE로 sequence의 next value 지정 가능
+
+--시퀀스 생성
+CREATE SEQUENCE T_SEQ
+START WITH 1
+INCREMENT BY 1
+MAXVALUE 10
+NOCYCLE
+;
+
+--테이블 생성
+CREATE TABLE T_SEQ_TEST
+(
+    no NUMBER DEFAULT T_SEQ.NEXTVAL PRIMARY KEY,
+    name VARCHAR2(10)
+);
+

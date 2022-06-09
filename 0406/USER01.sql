@@ -1,0 +1,29 @@
+--USER_ID : ORCLSTUDY
+--비번 : ORACLE
+
+CREATE USER ORCLSTUDY
+IDENTIFIED BY ORACLE;--공통 사용자 또는 롤 이름이 부적합합니다.
+
+ALTER SESSION SET  "_oracle_script" = true;
+--접속이 안됨->아직 권한 할당 하지 않음
+
+CREATE USER ORCLSTUDY
+IDENTIFIED BY ORACLE;--계정생성
+
+--권한 할당
+GRANT CREATE SESSION TO ORCLSTUDY;
+
+SELECT * 
+FROM ALL_USERS t1
+WHERE t1.username = 'ORCLSTUDY'
+;
+
+--사용자 비번 변경 (ORATCLE -> ORCL)
+ALTER USER ORCLSTUDY
+IDENTIFIED BY ORCL;
+
+--사용자 삭제하기
+ALTER SESSION SET "_oracle_script" = true;
+
+DROP USER ORCLSTUDY CASCADE;--CASCADE : 사용자와 객체 모두 삭제
+

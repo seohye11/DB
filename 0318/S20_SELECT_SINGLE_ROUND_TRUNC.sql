@@ -1,0 +1,13 @@
+--2018-07-13 23:56:28
+
+SELECT STD_DATE,
+       ROUND(STD_DATE,'CC') AS ROUND_CC, --연도 끝 2자리 2018이면 2050이하이므로 2001년
+       ROUND(STD_DATE,'YYYY') AS ROUND_YYYY, --2018-07-01기준으로 반올림
+       ROUND(STD_DATE,'Q') AS ROUND_Q, --각 분기의 2번째 달 16일기준 반올림
+       ROUND(STD_DATE,'DDD') AS ROUND_DDD, --해당일의 정오 기준 반올림
+       ROUND(STD_DATE,'HH') AS ROUND_HH
+FROM(
+SELECT TO_DATE('2018-07-13 23:56:28','YYYY-MM-DD HH24:MI:SS') STD_DATE
+FROM dual
+)
+;

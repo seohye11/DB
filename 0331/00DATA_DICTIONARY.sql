@@ -1,0 +1,12 @@
+--Data Dictionary(데이터 딕셔너리)
+-- : 오라클의 메모리 구조와 파일에 대한 구조 정보들
+--  각 오브젝트들이 사용하고 있는 공간들의 정보
+--  제약조건 정보
+--  사용자에 대한 정보
+--  권한이나 프로파일, 롤에 대한 정보
+--  감사에 대한 정보
+
+--Dictionary - static Dictionary - USER_XXX(현재 접속한 사용자가 소유한 객체 정보)
+--                               - ALL_XXX(사용가능한 모든 객체 정보)
+--                               - DBA_XXX(관리를 위한 정보 SYSTEM,SYS)
+--Dictionary - dynamic Dictionary - V$_XXX(성능 관련 정보)

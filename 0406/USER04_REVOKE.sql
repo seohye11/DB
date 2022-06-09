@@ -1,0 +1,8 @@
+GRANT RESOURCE, CREATE SESSION, CREATE TABLE TO ORCLSTUDY;
+
+--권한 취소
+--revoke[권한]FROM[사용자이름/롤/public]
+--GRANT로는 권한 부여 revoke
+ALTER SESSION SET "_oracle_script" = true;
+REVOKE RESOURCE, CREATE TABLE FROM ORCLSTUDY;
+

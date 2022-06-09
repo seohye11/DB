@@ -1,0 +1,25 @@
+--객체 권한 부여
+--GRANT [권한/ALL PRIVILEGES]
+--ON[스키마.객체이름]
+--TO[사용자이름/롤/PUBLIC]
+--[WITH GRANT OPTION]
+
+--temp -> GRANT SELECT -> GRANT INSERT
+
+CREATE TABLE temp(
+    col1 VARCHAR(20),
+    cli2 VARCHAR2(20)
+);--테이블 생성
+
+--temp SELECT 권한을 ORCLSTUDY에 부여
+GRANT SELECT ON temp TO ORCLSTUDY;
+
+--temp INSERT 권한을 ORCLSTUDY에 부여
+GRANT INSERT ON temp TO ORCLSTUDY;
+
+--SELECT, INSERT 권한 한꺼번에 부여
+GRANT SELECT, INSERT ON temp TO ORCLSTUDY;
+
+SELECT *
+FROM temp;
+

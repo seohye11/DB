@@ -1,0 +1,23 @@
+--이름이 없는 예외: 내부예외 중 이름이 존재하지 않는 예외
+--DECLARE
+--  예외이름1 EXCEPTION;
+--  PRAGMA EXCEPTION_INIT(예외이름1,예외번호);
+--BEGIN
+--EXCEPTION
+--  WHEN 예외이름1 THEN
+--      예외처리에 사용할 명령어
+--END;
+--/
+
+--사용자 정의 예외 : 사용자가 필요에 따라 직접 정의
+--DECLARE
+--  사용자예외이름 EXCEPTION;
+--BEGIN
+--  IF 사용자 예외 발생시킬 조건 THEN
+--      RAISE 사용자 예외이름;
+--  END IF;
+--EXCEPTION
+--  WHEN 사용자예외이름 THEN
+--      예외처리에 사용할 명령어;
+--END;
+--/

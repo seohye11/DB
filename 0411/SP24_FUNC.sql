@@ -1,0 +1,4 @@
+--함수 삭제
+--DROP FUNCTION 함수이름;
+
+DROP FUNCTION FUNC_AFTERTAX;

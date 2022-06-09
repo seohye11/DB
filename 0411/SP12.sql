@@ -1,0 +1,3 @@
+--프로시저 삭제하기 : DROP PROCEDURE 프로시저 이름;
+
+DROP PROCEDURE PRO_NOPARAM;

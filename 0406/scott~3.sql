@@ -1,0 +1,23 @@
+--사용자 생성
+--SYS/SYSTEM 관리자 계정으로 생성
+
+--CREATE USER 사용자 이름(필수)
+--IDENTIFIED BY 비번(필수)
+--DEFAULT TABLESPACE 이름
+--TEMPORARY TABLESPACE 이름
+--QUOTA 테이블 스페이스 크기 ON 테이블스페이스 이름
+--PROFILE 프로파일 이름
+--PASSWORD EXPIRE
+--ACCOUNT LOCK | UNLOCK
+
+--권한관리
+--GRANT 시스템 권한 TO 사용자이름 / ROLE / PUBLIC
+--WITH ADMIN OPTION
+
+ALTER SESSION SET  "_oracle_script" = true;
+
+CREATE USER ORCLSTUDY
+IDENTIFIED BY ORACLE;
+
+
+

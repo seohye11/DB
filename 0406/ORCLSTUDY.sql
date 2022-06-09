@@ -1,0 +1,4 @@
+CREATE TABLE TEMP2(
+    no NUMBER
+);
+DROP TABLE temp2;

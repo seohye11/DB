@@ -1,0 +1,10 @@
+--ROUND : 주어진 숫자를 반올림 한 후 출력
+--ROUND (숫자, 출력을 원하는 자리수)
+
+SELECT ROUND(1234.5678) AS ROUND01,
+       ROUND(1234.5678,1) AS ROUND02,
+       ROUND(1234.5678,2) AS ROUND03,
+       ROUND(1234.5678,-1) AS ROUND01,
+       ROUND(1234.5678,-2) AS ROUND01
+FROM dual
+;
